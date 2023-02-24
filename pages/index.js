@@ -15,7 +15,7 @@ export default function Home({ data }) {
     <>
       {
         data.map((res) => {
-          return <p key={res.ID}> {res.NAME} </p>
+          return <p key={res.id}> {res.name} </p>
         })
       }
     </>

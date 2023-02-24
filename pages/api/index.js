@@ -7,7 +7,7 @@ const handler = async (req, res) => {
 
   const seletData = async () => {
     try {
-      let data = await executeQuery('select * from user order by id DESC', []);
+      let data = await executeQuery('select * from data order by id DESC', []);
       res.json(data)
     } catch (err) {
       res.send(err);
@@ -18,7 +18,7 @@ const handler = async (req, res) => {
     let { name, email, tel } = body;
 
     let data = await executeQuery(
-      'insert into user (name,email,date) value (?,?,?)',
+      'insert into data (name,email,date) value (?,?,?)',
       [name, email, tel]
     );
     res.json(data)

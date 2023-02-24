@@ -15,9 +15,9 @@ const MyContext = ({ children }) => {
             console.log(obj)
             trans = await axios.post('http://localhost:3000/api', obj)
         } else if (type == 'put') {
-            trans = await axios.put(`/api/${obj.ID}`, obj)
+            trans = await axios.put(`/api/${obj.id}`, obj)
         } else {
-            trans = await axios.delete(`/api/${obj.ID}`)
+            trans = await axios.delete(`/api/${obj.id}`)
         }
         setData(trans)
     }
